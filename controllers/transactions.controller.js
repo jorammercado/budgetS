@@ -60,7 +60,8 @@ transactions.get("/:arrayIndex", (req,res) => {
 
 transactions.post("/", (req,res) => {
     transactionsArray.push(req.body)
-    res.status(200).json({status: "OK", payload: transactionsArray[transactionsArray.length-1]})
+    //res.status(200).json({status: "OK", payload: transactionsArray[transactionsArray.length-1]})
+    res.status(200).redirect(`/transactions/${transactionsArray.length-1}`)
 })
 
 const checkForValidUpdate = (req, res, next) => {
