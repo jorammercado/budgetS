@@ -51,8 +51,6 @@ transactions.get("/", (req,res) => {
         res.json(transactionsArray)
 })
 
-//transactions.get("/:order", )
-
 transactions.get("/:arrayIndex", (req,res) => {
    if(transactionsArray[req.params.arrayIndex])
         res.json(transactionsArray[req.params.arrayIndex])
